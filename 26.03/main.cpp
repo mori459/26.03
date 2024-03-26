@@ -25,6 +25,10 @@ float quot(float num1, float num2)
 	}
 	
 }
+float perc(float num1, float num2)
+{
+	return (num1 * num2) / 100;
+}
 
 int main()
 {
@@ -37,7 +41,7 @@ int main()
 	std::cin >> number_1;
 	std::cout << "¬ведите второе число: ";
 	std::cin >> number_2;
-	std::cout << "¬ведите знак (+\\-\\*\\/): ";
+	std::cout << "¬ведите знак (+\\-\\*\\/\\%): ";
 	std::cin >> choice;
 	if (choice == '+')
 	{
@@ -55,7 +59,10 @@ int main()
 	{
 		std::cout << quot(number_1, number_2);
 	}
-
+	else if (choice == '%')
+	{
+		std::cout << perc(number_1, number_2);
+	}
 
 
 
